@@ -1,0 +1,59 @@
+@use '../base/mixins' as mx;
+@use '../base/variables' as v;
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;//para que pading no represente problema
+}
+
+h1{
+
+    @include mx.heading;
+    text-align: center;
+    text-shadow: .15rem .15rem rgb(20, 174, 102);
+    
+}
+
+.contenedor{
+    
+    
+    font-size: .60rem;
+    display: grid;
+    text-align: center;
+    margin-top: 2.5rem;
+    margin-bottom: 0;
+    grid-template-columns: 10rem 4rem 4rem 5rem 5rem 6rem 6rem 3rem;
+    grid-template-rows: 8rem;
+    grid-gap: .5rem;
+    justify-content: center;
+    align-items: center;
+    padding-right: 1rem;
+    box-shadow: 5rem 0rem 3rem 0rem black;
+
+    @include mx.tablet{
+        text-align: center;
+        font-size: 1.3rem;
+        display: grid;
+        grid-template-columns: 27rem 5rem 5rem 4rem 4rem 6rem 6rem rem;
+    }
+    @include mx.desktop{
+        text-align: center;
+        font-size: 2rem;
+        display: grid;
+        grid-template-columns: 27rem 5rem 5rem 5rem 6rem 6rem 6rem 3rem;
+        grid-template-rows: 8rem;
+        grid-gap: 5rem;
+        justify-content: center;
+        box-shadow: 5rem 0rem 3rem 0rem black;
+    }
+
+}
+
+
+

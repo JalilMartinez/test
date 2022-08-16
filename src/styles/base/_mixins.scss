@@ -1,0 +1,24 @@
+@use '../base/variables' as v;
+
+@mixin heading{
+    text-transform: uppercase;
+    font-size: 6rem;
+    color: rgb(201, 37, 37);
+    letter-spacing: 2px;
+    border-radius: 0rem;
+}
+@mixin phone {
+    @media (min-width: v.$telefono){
+        @content;// para poderlo usar en un bloque de codigo
+    }
+}
+@mixin tablet {
+    @media (min-width: v.$tablet){
+        @content;// para poderlo usar en un bloque de codigo
+    }
+}
+@mixin desktop {
+    @media (min-width: v.$desktop){
+        @content;// para poderlo usar en un bloque de codigo
+    }
+}
